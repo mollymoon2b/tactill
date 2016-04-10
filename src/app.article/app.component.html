@@ -1,0 +1,65 @@
+<ul class="menu">
+    <li><img class="logo_header" src="img/plume.png"></li>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Authors</a>
+        <ul>
+            <li *ngFor="#author of authors"><a href="{{author.fields.website}}">{{author.fields.name}}</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Categories</a>
+        <ul>
+            <li><a href="#">Children</a></li>
+            <li><a href="#">Literature</a></li>
+            <li><a href="#">Other</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Posts</a>
+    <ul>
+            <li><a href="#">New</a></li>
+            <li><a href="#divForm">Write One</a></li>
+        </ul>
+    </li>
+</ul>
+
+<div class="container">
+    <div class="article" *ngFor="#article of articles">
+        <div>
+            <a href="#">
+                <h1>{{article.author.fields.name}} #{{article.categories.fields.title}}</h1>
+                <p>{{article.post.fields.body}}</p>
+            </a>
+        </div>
+        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+    </div>
+    <section>
+        <form  id="divForm" class="form" #f="ngForm" (ngSubmit)="onSubmitTemplateBased()">
+            <h1>Write a new post:</h1>
+            <div class="divForm">
+                <div class="form1">
+                    <p class="pForm">
+                        <label>Author:</label>
+                        <input type="text" [(ngModel)]="new_post.author" required>
+                    </p>
+                    <p class="pForm">
+                        <label>Category:</label>
+                        <select [(ngModel)]="new_post.categories">
+                            <option value="Children" selected> Children</option>
+                            <option value="Literature"> Literature</option>
+                            <option value="Other"> Other</option>
+                        </select>
+                    </p>
+                </div>
+                <div>
+                    <p class="pFormPost">
+                        <label>Post:</label>
+                        <input type="text" [(ngModel)]="new_post.post" required>
+                    </p>
+                </div>
+            </div>
+            <p class="pForm">
+                <button class="submitButton" type="submit" [disabled]="!f.valid">Submit</button>
+            </p>
+        </form>
+    </section>
+    <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="1"></div>
+</div>

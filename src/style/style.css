@@ -1,0 +1,153 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: arial;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	padding-top: 70px; 
+}
+.menu, .menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.menu {
+	border-bottom: 1px solid black;
+	position: fixed;
+	width: 100%; 
+	height: 50px;
+	background-color: #387ef5;
+    z-index: 10;
+    text-align: center;
+}
+.menu li {
+    display: inline-block;
+}
+.menu ul li {
+   display: inherit;
+}
+
+.menu a {
+	text-decoration: none;
+	color: white;
+	display:inline-block;
+    padding:17px;
+    display: block;
+}
+.menu ul {
+    position: absolute;
+    left: -999em;
+    text-align: left;
+    z-index: 1000;
+}
+.menu li:hover ul {
+    left: auto;
+    background-color: #387ef5;
+}
+
+.logo_header{
+	width: 30px;
+}
+
+.article{
+	position: relative;
+	border: 1px solid;
+	border-radius: 20px; 
+	margin: 0 auto;
+	margin-bottom: 20px; 
+	width: 600px;
+	height: 230px;
+}
+
+.article h1{
+	color: #387ef5;
+	padding: 30px 0px 0px 30px;
+}
+
+.article a {
+	color: black;
+    position: absolute;
+	width: 100%;
+    height: 100%;
+}
+
+.article p {
+	padding: 30px;
+	line-height: 19px;
+	padding-top: 20px;
+	width: 89%;
+}
+
+.form{
+	margin: 0 auto;
+	width: 525px;
+	padding: 25px 40px 40px 40px;
+	border: 1px solid;
+	border-radius: 20px; 
+}
+
+.form h1{
+	text-decoration: underline;
+
+}
+
+.inputPost {
+	vertical-align: top;
+	height: 140px;
+	width: 285px;
+}
+
+.divForm{
+	padding: 20px 0px 20px 0px;
+}
+
+.divForm p{
+	padding: 5px;
+}
+
+.form1{
+	float: left;
+	padding-right: 50px;
+}
+
+.form1 p{
+	padding-bottom: 10px;
+}
+
+.pFormPost input {
+	height: 60px;
+	width: 240px;
+	vertical-align: top;
+}
+
+.submitButton {
+	padding: 10px 40px 10px 40px;
+	width: 100%;
+	margin: 0 auto;
+	color: white;
+	background-color: #387ef5;
+	border: 1px solid;
+	border-radius: 20px;  
+}
+
+.submitButton:hover {
+	color: #387ef5;
+	background-color: white;
+}
+
+.fb-like{
+	position: absolute;
+	bottom: 18px;
+	right: 35px;
+}
+
+.fb-comments{
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+}
